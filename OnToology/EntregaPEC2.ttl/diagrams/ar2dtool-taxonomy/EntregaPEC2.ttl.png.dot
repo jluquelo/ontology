@@ -1,0 +1,46 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "base:SeatType" "base:VerifiedTrip" "base:Review" "base:MonthPub" "base:DayPub" "base:Satisfied" "base:Ryanair" "base:DateFlown" "base:Origin" "base:Country" "base:MonthFlown" "base:TypeOfTraveller" "base:ValueForMoney" "base:YearPub" "base:ServicesSatisfaction" "base:SeatComfort" "base:ReviewComment" "base:NonValuableTraveller" "base:Destination" "base:DatePublished" "base:Recommended" "base:ValuableTraveller" "base:Passenger" "base:ValuableCustomer" "base:Aircraft" "base:Author" "base:QatarAirways" "base:Title" "http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey#Wifi&Connectivity" "base:CabinStaffService" "http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey#Food&Beverages" "base:Trip" "base:Rating" "base:Disatisfied" "base:YearFlown" "base:NonValuableCustomer" "base:Airline" "base:DayFlown" "base:InflightEntertaiment" "base:GroundService" ; /*classes style*/
+	"base:Title" -> "base:Review" [ label = "rdfs:subClassOf" ];
+	"base:SeatType" -> "base:Trip" [ label = "rdfs:subClassOf" ];
+	"base:Origin" -> "base:Trip" [ label = "rdfs:subClassOf" ];
+	"base:Aircraft" -> "base:Trip" [ label = "rdfs:subClassOf" ];
+	"base:SeatComfort" -> "base:ServicesSatisfaction" [ label = "rdfs:subClassOf" ];
+	"base:GroundService" -> "base:ServicesSatisfaction" [ label = "rdfs:subClassOf" ];
+	"base:Review" -> "owl:Thing" [ label = "rdfs:subClassOf" ];
+	"base:ValuableTraveller" -> "base:TypeOfTraveller" [ label = "rdfs:subClassOf" ];
+	"base:InflightEntertaiment" -> "base:ServicesSatisfaction" [ label = "rdfs:subClassOf" ];
+	"base:NonValuableCustomer" -> "base:SeatType" [ label = "rdfs:subClassOf" ];
+	"base:YearFlown" -> "base:DateFlown" [ label = "rdfs:subClassOf" ];
+	"base:DatePublished" -> "base:Review" [ label = "rdfs:subClassOf" ];
+	"base:DayPub" -> "base:DatePublished" [ label = "rdfs:subClassOf" ];
+	"http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey#Wifi&Connectivity" -> "base:ServicesSatisfaction" [ label = "rdfs:subClassOf" ];
+	"base:Rating" -> "base:Review" [ label = "rdfs:subClassOf" ];
+	"base:VerifiedTrip" -> "base:Trip" [ label = "rdfs:subClassOf" ];
+	"base:ValuableCustomer" -> "base:SeatType" [ label = "rdfs:subClassOf" ];
+	"base:ValueForMoney" -> "base:ServicesSatisfaction" [ label = "rdfs:subClassOf" ];
+	"base:Destination" -> "base:Trip" [ label = "rdfs:subClassOf" ];
+	"base:QatarAirways" -> "base:Airline" [ label = "rdfs:subClassOf" ];
+	"base:TypeOfTraveller" -> "base:Passenger" [ label = "rdfs:subClassOf" ];
+	"base:CabinStaffService" -> "base:ServicesSatisfaction" [ label = "rdfs:subClassOf" ];
+	"base:YearPub" -> "base:DatePublished" [ label = "rdfs:subClassOf" ];
+	"base:Author" -> "base:Passenger" [ label = "rdfs:subClassOf" ];
+	"http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey#Food&Beverages" -> "base:ServicesSatisfaction" [ label = "rdfs:subClassOf" ];
+	"base:Airline" -> "base:Trip" [ label = "rdfs:subClassOf" ];
+	"base:MonthFlown" -> "base:DateFlown" [ label = "rdfs:subClassOf" ];
+	"base:Recommended" -> "base:Review" [ label = "rdfs:subClassOf" ];
+	"base:ServicesSatisfaction" -> "base:Review" [ label = "rdfs:subClassOf" ];
+	"base:Trip" -> "owl:Thing" [ label = "rdfs:subClassOf" ];
+	"base:Satisfied" -> "base:Rating" [ label = "rdfs:subClassOf" ];
+	"base:Country" -> "base:Passenger" [ label = "rdfs:subClassOf" ];
+	"base:Disatisfied" -> "base:Rating" [ label = "rdfs:subClassOf" ];
+	"base:ReviewComment" -> "base:Review" [ label = "rdfs:subClassOf" ];
+	"base:NonValuableTraveller" -> "base:TypeOfTraveller" [ label = "rdfs:subClassOf" ];
+	"base:Passenger" -> "owl:Thing" [ label = "rdfs:subClassOf" ];
+	"base:DayFlown" -> "base:DateFlown" [ label = "rdfs:subClassOf" ];
+	"base:DateFlown" -> "base:Trip" [ label = "rdfs:subClassOf" ];
+	"base:Ryanair" -> "base:Airline" [ label = "rdfs:subClassOf" ];
+	"base:MonthPub" -> "base:DatePublished" [ label = "rdfs:subClassOf" ];
+
+}
