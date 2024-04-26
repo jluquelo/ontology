@@ -1,0 +1,170 @@
+{
+  "@context" : {
+    "TypeOfTraveller" : {
+      "@id" : "http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/TypeOfTraveller"
+    },
+    "hasRating" : {
+      "@id" : "http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/hasRating"
+    },
+    "Review" : {
+      "@id" : "http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/Review"
+    },
+    "NonValuableCustomer" : {
+      "@id" : "http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/NonValuableCustomer"
+    },
+    "Country" : {
+      "@id" : "http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/Country"
+    },
+    "Recommended" : {
+      "@id" : "http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/Recommended"
+    },
+    "Thing" : {
+      "@id" : "http://www.w3.org/2002/07/owl#Thing"
+    },
+    "topDataProperty" : {
+      "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
+    },
+    "DatePublished" : {
+      "@id" : "http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/DatePublished"
+    },
+    "Title" : {
+      "@id" : "http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/Title"
+    },
+    "fills" : {
+      "@id" : "http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/fills",
+      "@type" : "@id"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "MonthFlown" : {
+      "@id" : "http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/MonthFlown"
+    },
+    "Destination" : {
+      "@id" : "http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/Destination"
+    },
+    "YearFlown" : {
+      "@id" : "http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/YearFlown"
+    },
+    "NonValuableTraveller" : {
+      "@id" : "http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/NonValuableTraveller"
+    },
+    "ReviewComment" : {
+      "@id" : "http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/ReviewComment"
+    },
+    "reviews" : {
+      "@id" : "http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/reviews",
+      "@type" : "@id"
+    },
+    "Origin" : {
+      "@id" : "http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/Origin"
+    },
+    "Satisfied" : {
+      "@id" : "http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/Satisfied"
+    },
+    "ValueForMoney" : {
+      "@id" : "http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/ValueForMoney"
+    },
+    "DateFlown" : {
+      "@id" : "http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/DateFlown"
+    },
+    "CabinStaffService" : {
+      "@id" : "http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/CabinStaffService"
+    },
+    "ServicesSatisfaction" : {
+      "@id" : "http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/ServicesSatisfaction"
+    },
+    "topObjectProperty" : {
+      "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty",
+      "@type" : "@id"
+    },
+    "QatarAirways" : {
+      "@id" : "http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/QatarAirways"
+    },
+    "Passenger" : {
+      "@id" : "http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/Passenger"
+    },
+    "DayFlown" : {
+      "@id" : "http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/DayFlown"
+    },
+    "SeatComfort" : {
+      "@id" : "http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/SeatComfort"
+    },
+    "Rating" : {
+      "@id" : "http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/Rating"
+    },
+    "ValuableTraveller" : {
+      "@id" : "http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/ValuableTraveller"
+    },
+    "Aircraft" : {
+      "@id" : "http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/Aircraft"
+    },
+    "Ryanair" : {
+      "@id" : "http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/Ryanair"
+    },
+    "VerifiedTrip" : {
+      "@id" : "http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/VerifiedTrip"
+    },
+    "Connectivity" : {
+      "@id" : "http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey#Wifi&Connectivity"
+    },
+    "hasSeatType" : {
+      "@id" : "http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/hasSeatType",
+      "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "Beverages" : {
+      "@id" : "http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey#Food&Beverages"
+    },
+    "reviewedBy" : {
+      "@id" : "http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/reviewedBy",
+      "@type" : "@id"
+    },
+    "Airline" : {
+      "@id" : "http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/Airline"
+    },
+    "DayPub" : {
+      "@id" : "http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/DayPub"
+    },
+    "Author" : {
+      "@id" : "http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/Author"
+    },
+    "GroundService" : {
+      "@id" : "http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/GroundService"
+    },
+    "MonthPub" : {
+      "@id" : "http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/MonthPub"
+    },
+    "Disatisfied" : {
+      "@id" : "http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/Disatisfied"
+    },
+    "sameAs" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#sameAs"
+    },
+    "Trip" : {
+      "@id" : "http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/Trip"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "filledBy" : {
+      "@id" : "http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/filledBy",
+      "@type" : "@id"
+    },
+    "ValuableCustomer" : {
+      "@id" : "http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/ValuableCustomer"
+    },
+    "InflightEntertaiment" : {
+      "@id" : "http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/InflightEntertaiment"
+    },
+    "hasTypeOfTraveller" : {
+      "@id" : "http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/hasTypeOfTraveller",
+      "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "SeatType" : {
+      "@id" : "http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/SeatType"
+    },
+    "YearPub" : {
+      "@id" : "http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/YearPub"
+    }
+  }
+}
