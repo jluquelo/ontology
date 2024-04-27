@@ -1,0 +1,1083 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/"
+     xml:base="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey">
+        <owl:versionIRI rdf:resource="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/1.0.0"/>
+        <rdfs:comment xml:lang="en">@Author:
+Jorge Luque Lorente
+
+@Description:
+Ontology related to the satisfaction survey made by the passengers of the companies Qatar Airlines and Ryanair where their opinions are shared and their user experience rated</rdfs:comment>
+        <owl:versionInfo xml:lang="en">Version 1.0.0 of the Ontology</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#sameAs -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#sameAs"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/filledBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/filledBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/fills"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/Rating"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/Passenger"/>
+        <rdfs:comment xml:lang="en">the object property inverse to fills</rdfs:comment>
+        <rdfs:label xml:lang="en">filledBy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/fills -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/fills">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/Passenger"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/Rating"/>
+        <rdfs:comment xml:lang="en">One review is related to only one passenger</rdfs:comment>
+        <rdfs:label xml:lang="en">fills</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/reviewedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/reviewedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/reviews"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/Trip"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/Review"/>
+        <rdfs:comment xml:lang="en">the object property inverse to reviews</rdfs:comment>
+        <rdfs:label xml:lang="en">reviewedBy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/reviews -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/reviews">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/Review"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/Trip"/>
+        <rdfs:comment xml:lang="en">One review is related to only one trip</rdfs:comment>
+        <rdfs:label xml:lang="en">reviews</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/hasRating -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/hasRating">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/Rating"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</xsd:minInclusive>
+                    </rdf:Description>
+                    <rdf:Description>
+                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</xsd:maxInclusive>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:label xml:lang="en">hasRating</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/hasSeatType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/hasSeatType">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/SeatType"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label xml:lang="en">hasSeatType</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/hasTypeOfTraveller -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/hasTypeOfTraveller">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/TypeOfTraveller"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label xml:lang="en">hasTypeOfTraveller</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey#Food&amp;Beverages -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey#Food&amp;Beverages">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/ServicesSatisfaction"/>
+        <rdfs:comment xml:lang="en">Values related to the food and beverages service</rdfs:comment>
+        <rdfs:label xml:lang="en">Food&amp;Beverages</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey#Wifi&amp;Connectivity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey#Wifi&amp;Connectivity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/ServicesSatisfaction"/>
+        <rdfs:comment xml:lang="en">Ratings related to the wifi &amp; connectivity</rdfs:comment>
+        <rdfs:label xml:lang="en">Wifi&amp;Connectivity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/Aircraft -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/Aircraft">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/Trip"/>
+        <rdfs:comment xml:lang="en">The class is related to the aircraft used in the flight</rdfs:comment>
+        <rdfs:label xml:lang="en">Aircraft</rdfs:label>
+        <rdfs:sameAs xml:lang="en">http://dbpedia.org/ontology/Aircraft</rdfs:sameAs>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/Airline -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/Airline">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/Trip"/>
+        <rdfs:comment xml:lang="en">A class defining the source of the customer opinion. The opinion of the customer will be related to the satisfaction survey promoted by the value of this class</rdfs:comment>
+        <rdfs:label xml:lang="en">Airline</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/Author -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/Author">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/Passenger"/>
+        <rdfs:comment xml:lang="en">The author of the review. The values are not available for Qatar Airways passengers.</rdfs:comment>
+        <rdfs:label xml:lang="en">Author</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/CabinStaffService -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/CabinStaffService">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/ServicesSatisfaction"/>
+        <rdfs:comment xml:lang="en">Rating related to the cabin staff service</rdfs:comment>
+        <rdfs:label xml:lang="en">CabinStaffService</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/Country -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/Country">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/Passenger"/>
+        <rdfs:comment>The class is related to passenger country</rdfs:comment>
+        <rdfs:label xml:lang="en">Country</rdfs:label>
+        <rdfs:sameAs xml:lang="en">http://dbpedia.org/page/Location_(geography)</rdfs:sameAs>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/DateFlown -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/DateFlown">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/Trip"/>
+        <rdfs:comment xml:lang="en">Class related to the date when the flight was done</rdfs:comment>
+        <rdfs:label xml:lang="en">DateFlown</rdfs:label>
+        <rdfs:sameAs xml:lang="en">http://dbpedia.org/page/Date</rdfs:sameAs>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/DatePublished -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/DatePublished">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/Review"/>
+        <rdfs:comment xml:lang="en">The class is related to the date when the passenger has published the review</rdfs:comment>
+        <rdfs:label xml:lang="en">DatePublished</rdfs:label>
+        <rdfs:sameAs xml:lang="en">http://dbpedia.org/page/Date</rdfs:sameAs>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/DayFlown -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/DayFlown">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/DateFlown"/>
+        <rdfs:comment xml:lang="en">The class is related to the day when the flight related to the review was done</rdfs:comment>
+        <rdfs:label xml:lang="en">DayFlown</rdfs:label>
+        <rdfs:sameAs xml:lang="en">http://dbpedia.org/page/Day</rdfs:sameAs>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/DayPub -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/DayPub">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/DatePublished"/>
+        <rdfs:comment xml:lang="en">The day when the survey is published</rdfs:comment>
+        <rdfs:label xml:lang="en">DayPub</rdfs:label>
+        <rdfs:sameAs xml:lang="en">http://dbpedia.org/page/Day</rdfs:sameAs>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/Destination -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/Destination">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/Trip"/>
+        <rdfs:comment xml:lang="en">The class is related to the destination of the flights</rdfs:comment>
+        <rdfs:label xml:lang="en">Destination</rdfs:label>
+        <rdfs:sameAs xml:lang="en">http://dbpedia.org/page/Location_(geography)</rdfs:sameAs>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/Disatisfied -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/Disatisfied">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/Rating"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/Satisfied"/>
+        <rdfs:comment xml:lang="en">The passenger opinion is categorized as disatisfied considering the rating</rdfs:comment>
+        <rdfs:label xml:lang="en">Disatisfied</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/GroundService -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/GroundService">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/ServicesSatisfaction"/>
+        <rdfs:comment xml:lang="en">Rating related to the ground service</rdfs:comment>
+        <rdfs:label xml:lang="en">GroundService</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/InflightEntertaiment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/InflightEntertaiment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/ServicesSatisfaction"/>
+        <rdfs:comment xml:lang="en">Rating related inflight entertaiment</rdfs:comment>
+        <rdfs:label xml:lang="en">InflightEntertaiment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/MonthFlown -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/MonthFlown">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/DateFlown"/>
+        <rdfs:comment xml:lang="en">The class is related to the month when the flight related to the review was done</rdfs:comment>
+        <rdfs:label xml:lang="en">MonthFlown</rdfs:label>
+        <rdfs:sameAs xml:lang="en">http://dbpedia.org/page/Month</rdfs:sameAs>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/MonthPub -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/MonthPub">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/DatePublished"/>
+        <rdfs:comment xml:lang="en">The month when the survey is published</rdfs:comment>
+        <rdfs:label xml:lang="en">MonthPub</rdfs:label>
+        <rdfs:sameAs xml:lang="en">http://dbpedia.org/page/Month</rdfs:sameAs>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/NonValuableCustomer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/NonValuableCustomer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/SeatType"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/ValuableCustomer"/>
+        <rdfs:comment xml:lang="en">The traveller is considered as non valuable customer considering the seat type used during the flight</rdfs:comment>
+        <rdfs:label xml:lang="en">NonValuableCustomer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/NonValuableTraveller -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/NonValuableTraveller">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/TypeOfTraveller"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/ValuableTraveller"/>
+        <rdfs:comment xml:lang="en">The traveller is considered as non valuable customer</rdfs:comment>
+        <rdfs:label xml:lang="en">NonValuableTraveller</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/Origin -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/Origin">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/Trip"/>
+        <rdfs:comment xml:lang="en">The class is related to the origin of the flights</rdfs:comment>
+        <rdfs:label xml:lang="en">Origin</rdfs:label>
+        <rdfs:sameAs xml:lang="en">http://dbpedia.org/page/Location_(geography)</rdfs:sameAs>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/Passenger -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/Passenger">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="en">Class grouping the subclases related to passenger information</rdfs:comment>
+        <rdfs:label xml:lang="en">Passenger</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/QatarAirways -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/QatarAirways">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/Airline"/>
+        <rdfs:comment xml:lang="en">Reviews coming from Qatar Airways airline passengers</rdfs:comment>
+        <rdfs:label xml:lang="en">QatarAirways</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/Rating -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/Rating">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/hasRating"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/Review"/>
+        <rdfs:comment xml:lang="en">The class is related with the ratings set to the flight experience by the passengers</rdfs:comment>
+        <rdfs:label xml:lang="en">Rating</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/Recommended -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/Recommended">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/Review"/>
+        <rdfs:comment xml:lang="en">The opinion of the passengers related to recommendation or not of the flight</rdfs:comment>
+        <rdfs:label xml:lang="en">Recommended</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/Review -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/Review">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="en">Class grouping the subclases related to the review and opinion of the flight made by the customers</rdfs:comment>
+        <rdfs:label xml:lang="en">Review</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/ReviewComment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/ReviewComment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/Review"/>
+        <rdfs:comment xml:lang="en">The class is related to the comments shared by the passengers</rdfs:comment>
+        <rdfs:label xml:lang="en">ReviewComment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/Ryanair -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/Ryanair">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/Airline"/>
+        <rdfs:comment xml:lang="en">Reviews coming from Ryanair airline passengers</rdfs:comment>
+        <rdfs:label xml:lang="en">Ryanair</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/Satisfied -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/Satisfied">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/Rating"/>
+        <rdfs:comment xml:lang="en">The passenger opinion is categorized as satisfied considering the rating</rdfs:comment>
+        <rdfs:label xml:lang="en">Satisfied</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/SeatComfort -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/SeatComfort">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/ServicesSatisfaction"/>
+        <rdfs:comment xml:lang="en">Ratings related to seat comfort</rdfs:comment>
+        <rdfs:label xml:lang="en">SeatComfort</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/SeatType -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/SeatType">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/Trip"/>
+        <rdfs:comment xml:lang="en">The class is related to the seat type selected by the passenger</rdfs:comment>
+        <rdfs:label xml:lang="en">SeatType</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/ServicesSatisfaction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/ServicesSatisfaction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/Review"/>
+        <rdfs:comment xml:lang="en">The class is related to the service satisfaction rating shared by the Ryanair passengers</rdfs:comment>
+        <rdfs:label xml:lang="en">ServicesSatisfaction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/Title -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/Title">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/Review"/>
+        <rdfs:comment xml:lang="en">Class related to the Title included in the review made by the passengers</rdfs:comment>
+        <rdfs:label xml:lang="en">Title</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/Trip -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/Trip">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment>Class grouping the subclases related to flight that has been reviewed by the passengers</rdfs:comment>
+        <rdfs:label xml:lang="en">Trip</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/TypeOfTraveller -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/TypeOfTraveller">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/Passenger"/>
+        <rdfs:comment xml:lang="en">The class is related to the type of traveller who answered the question</rdfs:comment>
+        <rdfs:label xml:lang="en">TypeOfTraveller</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/ValuableCustomer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/ValuableCustomer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/SeatType"/>
+        <rdfs:comment xml:lang="en">The traveller is considered as valuable customer considering the seat type used during the flight</rdfs:comment>
+        <rdfs:label xml:lang="en">ValuableCustomer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/ValuableTraveller -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/ValuableTraveller">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/TypeOfTraveller"/>
+        <rdfs:comment xml:lang="en">The traveller is considered as valuable customer</rdfs:comment>
+        <rdfs:label xml:lang="en">ValuableTraveller</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/ValueForMoney -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/ValueForMoney">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/ServicesSatisfaction"/>
+        <rdfs:comment xml:lang="en">Ratings related to the value for money</rdfs:comment>
+        <rdfs:label xml:lang="en">ValueForMoney</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/VerifiedTrip -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/VerifiedTrip">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/Trip"/>
+        <rdfs:comment xml:lang="en">The class contains the information about the verification or not of the trip</rdfs:comment>
+        <rdfs:label xml:lang="en">VerifiedTrip</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/YearFlown -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/YearFlown">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/DateFlown"/>
+        <rdfs:comment xml:lang="en">The class is related to the year when the flight related to the review was done</rdfs:comment>
+        <rdfs:label xml:lang="en">YearFlown</rdfs:label>
+        <rdfs:sameAs xml:lang="en">http://dbpedia.org/page/Year</rdfs:sameAs>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/YearPub -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/YearPub">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/DatePublished"/>
+        <rdfs:comment xml:lang="en">The year when the survey is published</rdfs:comment>
+        <rdfs:label xml:lang="en">YearPub</rdfs:label>
+        <rdfs:sameAs xml:lang="en">http://dbpedia.org/page/Year</rdfs:sameAs>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/Passenger1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/Passenger1">
+        <hasTypeOfTraveller xml:lang="en">Business</hasTypeOfTraveller>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/Passenger2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/Passenger2">
+        <hasTypeOfTraveller xml:lang="en">SoloLeisure</hasTypeOfTraveller>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/Rating1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/Rating1">
+        <hasRating rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</hasRating>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/Rating2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/Rating2">
+        <hasRating rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</hasRating>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/Trip1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/Trip1">
+        <hasSeatType xml:lang="en">BusinessClass</hasSeatType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/Trip2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/Trip2">
+        <hasSeatType xml:lang="en">EconomyClass</hasSeatType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="urn:swrl:var#r">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#n">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#s">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#l">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#t">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:comment xml:lang="en">The rule categorizes Disatisfied psasenger</rdfs:comment>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/Rating"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/hasRating"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#n"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThan"/>
+                                        <swrl:arguments>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:resource="urn:swrl:var#n"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/Disatisfied"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:comment xml:lang="en">The rule categorizes valuable customer</rdfs:comment>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/SeatType"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#s"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/hasSeatType"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#s"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#l"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#contains"/>
+                                        <swrl:arguments>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:resource="urn:swrl:var#l"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first xml:lang="en">BusinessClass</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/ValuableCustomer"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#s"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:comment xml:lang="en">The rule categorizes non valuable customer</rdfs:comment>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/SeatType"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#s"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/hasSeatType"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#s"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#l"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#contains"/>
+                                        <swrl:arguments>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:resource="urn:swrl:var#l"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first xml:lang="en">EconomyClass</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/NonValuableCustomer"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#s"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:comment xml:lang="en">The rule categorizes valuable traveller</rdfs:comment>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/TypeOfTraveller"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#t"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/hasTypeOfTraveller"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#t"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#l"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#contains"/>
+                                        <swrl:arguments>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:resource="urn:swrl:var#l"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first xml:lang="en">Business</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/ValuableTraveller"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#t"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:comment xml:lang="en">The rule categorizes non valuable traveller</rdfs:comment>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/TypeOfTraveller"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#t"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/hasTypeOfTraveller"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#t"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#l"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#contains"/>
+                                        <swrl:arguments>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:resource="urn:swrl:var#l"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first xml:lang="en">SoloLeisure</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/NonValuableTraveller"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#t"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:comment xml:lang="en">The rule categorizes Satisfied psasenger</rdfs:comment>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/Rating"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/hasRating"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#n"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual"/>
+                                        <swrl:arguments>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:resource="urn:swrl:var#n"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/root/ontologies/2024/3/Airlines_Satisfaction_Survey/Satisfied"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
